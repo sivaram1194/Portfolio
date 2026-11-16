@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sivaram Somasundaram · Senior iOS Developer</title>
+<meta name="description" content="Portfolio of Sivaram Somasundaram, a Senior iOS and tvOS Developer based in Chennai with 5.7+ years of experience in Swift, SwiftUI, UIKit, and Clean Architecture.">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#f6f7f9;--surface:#fff;--ink:#14171c;--muted:#59616d;--line:#dfe3e9;--accent:#1f5eff;--accent-ink:#fff;--code-bg:#0f141b;--code-ink:#d7dde6;--k:#ff7ab2;--s:#fc6a5d;--t:#7fd1ff;--c:#7f8c9b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e13;--surface:#141922;--ink:#eef1f5;--muted:#9aa4b2;--line:#252c38;--accent:#6e9bff;--accent-ink:#0b0e13}}
+:root[data-theme="dark"]{--bg:#0b0e13;--surface:#141922;--ink:#eef1f5;--muted:#9aa4b2;--line:#252c38;--accent:#6e9bff;--accent-ink:#0b0e13}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--accent);color:var(--accent-ink);padding:8px 12px;border-radius:8px;z-index:50}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:20px;height:56px}
+.brand{font-weight:700;text-decoration:none;white-space:nowrap}
+nav{overflow-x:auto;scrollbar-width:none;flex:1}nav::-webkit-scrollbar{display:none}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;justify-content:flex-end}
+nav a{display:block;padding:6px 12px;border-radius:999px;text-decoration:none;color:var(--muted);font-size:14.5px;white-space:nowrap}
+nav a:hover{color:var(--ink);background:var(--surface)}
+section{padding:72px 0 8px}
+h1,h2,h3,h4{line-height:1.2;margin:0}
+h2{font-size:clamp(28px,4vw,38px);letter-spacing:-.02em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:62ch;margin:0 0 28px}
+.kicker{color:var(--accent);font-weight:600;font-size:14.5px;margin-bottom:6px}
+.hero{display:grid;gap:36px;padding-top:56px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
+h1{font-size:clamp(40px,8vw,68px);letter-spacing:-.035em}
+.role{font-size:clamp(19px,3vw,24px);color:var(--muted);margin:10px 0 18px}
+.hero p{max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600;font-size:15px;cursor:pointer;color:var(--ink);font-family:inherit}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{border-color:var(--accent)}
+.social{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+.social a:hover{color:var(--accent)}
+.code{background:var(--code-bg);color:var(--code-ink);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.code .top{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid #222a36;font:13px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--c)}
+.dot{width:11px;height:11px;border-radius:50%;background:#ff5f57}.dot:nth-child(2){background:#febc2e}.dot:nth-child(3){background:#28c840}
+.code pre{margin:0;padding:16px 18px;overflow-x:auto;font:13.5px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace}
+.k{color:var(--k)}.s{color:var(--s)}.t{color:var(--t)}.c{color:var(--c)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 16px}
+.chips span{font-size:12.5px;padding:3px 10px;border-radius:999px;border:1px solid #2b3442;color:var(--code-ink)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.stat b{display:block;font-size:34px;letter-spacing:-.02em;line-height:1.1}
+.stat span{color:var(--muted);font-size:14.5px}
+.p2{max-width:70ch;color:var(--muted)}.p2 p{margin:0 0 14px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.card h3{font-size:17px;margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:15px}
+.skills{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.skills h3{font-size:16px;margin-bottom:10px}
+.skills ul,.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.skills li,.tags li{font-size:13.5px;padding:3px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px}
+.job .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;color:var(--muted);font-size:14.5px;margin-bottom:8px}
+.job h3{font-size:20px}.job .co{color:var(--muted);margin:2px 0 10px}
+ul.pts{margin:0;padding-left:20px}ul.pts li{margin:6px 0;color:var(--muted);font-size:15.5px}ul.pts b{color:var(--ink);font-weight:600}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px}
+.proj header{all:unset;display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.ico{width:52px;height:52px;border-radius:13px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700;font-size:18px;flex:none}
+.proj h3{font-size:21px}.proj .sub{color:var(--muted);font-size:14.5px}
+.badge{margin-left:auto;font-size:12.5px;padding:3px 10px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;white-space:nowrap}
+.proj .tags{margin:12px 0}
+.edu{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.contact{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:20px}
+.contact a,.contact div{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;text-decoration:none}
+.contact small{display:block;color:var(--muted);font-size:13.5px}
+.contact a:hover{border-color:var(--accent)}
+footer{margin-top:72px;border-top:1px solid var(--line);padding:24px 0 32px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:10px;font-size:14.5px;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+ <div class="wrap bar">
+  <a class="brand" href="#top">Sivaram Somasundaram</a>
+  <nav aria-label="Primary"><ul>
+   <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+   <li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+ </div>
+</header>
+
+<main id="main" class="wrap">
+ <div class="hero">
+  <div>
+   <div class="kicker">Based in Chennai</div>
+   <h1>Sivaram Somasundaram</h1>
+   <div class="role">Senior iOS &amp; tvOS Developer</div>
+   <p>I build iOS and Apple TV apps with Swift, SwiftUI, and UIKit using Clean Architecture. I’ve shipped streaming apps for NBCUniversal brands, retail and edtech apps for major US clients, and set up CI/CD pipelines from scratch.</p>
+   <div class="btns">
+    <a class="btn primary" href="#projects">View Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
+    <a class="btn" href="https://github.com/sivaram1194" target="_blank" rel="noopener noreferrer">GitHub</a>
+   </div>
+   <div class="social">
+    <a href="https://linkedin.com/in/sivaram-somasundaram-6a459b11b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/sivaram1194" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="mailto:sivar468@gmail.com">Email</a>
+   </div>
+  </div>
+  <div class="code" aria-label="Developer.swift code sample">
+   <div class="top"><span class="dot"></span><span class="dot"></span><span class="dot"></span>&nbsp;Developer.swift</div>
+<pre><span class="k">import</span> SwiftUI
+
+<span class="k">struct</span> <span class="t">Developer</span> {
+    <span class="k">let</span> name = <span class="s">"Sivaram Somasundaram"</span>
+    <span class="k">let</span> role = <span class="s">"Senior iOS Developer"</span>
+    <span class="k">let</span> experience = <span class="s">"5.7+ years"</span>
+    <span class="k">let</span> basedIn = <span class="s">"Chennai"</span>
+
+    <span class="k">let</span> stack = [
+        <span class="s">"Swift"</span>, <span class="s">"SwiftUI"</span>,
+        <span class="s">"UIKit"</span>, <span class="s">"tvOS"</span>
+    ]
+
+    <span class="c">// Tests and pipelines</span>
+    <span class="k">let</span> unitTestCoverage = <span class="s">"80–95%"</span>
+}</pre>
+   <div class="chips"><span>Swift</span><span>SwiftUI</span><span>tvOS</span></div>
+  </div>
+ </div>
+
+ <div class="stats">
+  <div class="stat"><b>5.7+</b><span>Years of experience</span></div>
+  <div class="stat"><b>80–95%</b><span>Unit test coverage maintained</span></div>
+  <div class="stat"><b>9+</b><span>iOS apps delivered early in my career</span></div>
+  <div class="stat"><b>5</b><span>Key projects on the App Store</span></div>
+ </div>
+
+ <section id="about">
+  <div class="kicker">Profile</div>
+  <h2>About me</h2>
+  <div class="p2">
+   <p>Senior iOS Developer with 5.7+ years of end-to-end mobile development across consumer apps, enterprise platforms, and streaming media. I build pixel-perfect SwiftUI and UIKit interfaces and structure them with MVVM, VIPER, and MVVM-C.</p>
+   <p>I’ve integrated Amazon Bedrock LLM inference into a production tvOS workflow, and I use Claude Code, GitHub Copilot, and Cursor for test generation, refactoring, and documentation. I also work with Apple TV, Amazon Chime SDK, Apollo GraphQL, StoreKit 2, and Datadog RUM.</p>
+  </div>
+  <div class="grid" id="highlights"></div>
+ </section>
+
+ <section id="skills">
+  <div class="kicker">Skills</div>
+  <h2>Technologies I work with</h2>
+  <p class="lead">Native iOS and tvOS development, backed by solid testing, architecture, and delivery practices.</p>
+  <div class="skills" id="skillGrid"></div>
+ </section>
+
+ <section id="experience">
+  <div class="kicker">Career</div>
+  <h2>Work experience</h2>
+  <div id="jobs"></div>
+ </section>
+
+ <section id="projects">
+  <div class="kicker">Portfolio</div>
+  <h2>Key projects</h2>
+  <p class="lead">Production apps I’ve worked on, from tvOS streaming to retail and edtech.</p>
+  <div id="projList"></div>
+ </section>
+
+ <section id="education">
+  <div class="kicker">Background</div>
+  <h2>Education &amp; certifications</h2>
+  <div class="edu">
+   <div class="card"><h3>B.E. – Computer Science &amp; Engineering</h3><p>Francis Xavier Engineering College, Tirunelveli (Anna University)<br>2016 · 7.04 CGPA</p></div>
+   <div class="card"><h3>Certifications</h3>
+    <ul class="pts" style="margin-top:6px">
+     <li>Claude 101, Claude Academy (Sep 2026)</li>
+     <li>iOS Mobile App Development, Greens Technologies</li>
+     <li>Diploma in Mobile App Dev (C, C++, Java, Android)</li>
+     <li>PHP, AngularJS, CodeIgniter, CJ Technologies</li>
+    </ul></div>
+   <div class="card"><h3>Languages</h3><p>English, Tamil, Hindi</p></div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <div class="kicker">Contact</div>
+  <h2>Get in touch</h2>
+  <p class="lead">Reach me by email or phone, or connect with me on LinkedIn and GitHub.</p>
+  <div class="btns" style="margin-top:0">
+   <a class="btn primary" href="mailto:sivar468@gmail.com">Email me</a>
+   <button class="btn" id="copy" type="button">Copy email</button>
+  </div>
+  <div class="contact">
+   <a href="mailto:sivar468@gmail.com"><small>Email</small>sivar468@gmail.com</a>
+   <a href="tel:+918122582803"><small>Phone</small>+91 81225 82803</a>
+   <a href="https://linkedin.com/in/sivaram-somasundaram-6a459b11b" target="_blank" rel="noopener noreferrer"><small>LinkedIn</small>View my profile</a>
+   <a href="https://github.com/sivaram1194" target="_blank" rel="noopener noreferrer"><small>GitHub</small>View my profile</a>
+   <div><small>Location</small>Chennai, India</div>
+  </div>
+ </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Sivaram Somasundaram · Senior iOS Developer, Chennai</span><a href="#top">Back to top</a></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var highlights=[
+ ["Native iOS &amp; tvOS","Swift, SwiftUI, and UIKit for production iPhone and Apple TV apps."],
+ ["Clean Architecture","MVVM, VIPER, MVVM-C, and Atomic Design for maintainable, scalable code."],
+ ["Testing &amp; CI/CD","80–95% unit test coverage and pipelines built from scratch with GitHub Actions and Bitrise."],
+ ["AI-assisted delivery","Amazon Bedrock in production, plus Claude Code, Copilot, and Cursor in daily work."]
+];
+$("highlights").innerHTML=highlights.map(function(h){return '<div class="card"><h3>'+h[0]+'</h3><p>'+h[1]+'</p></div>'}).join("");
+
+var skills={
+ "iOS Technologies":["SwiftUI","UIKit","Combine","RxSwift","Core Data","StoreKit 2","Apollo GraphQL"],
+ "Languages":["Swift 6.2","Objective-C","JavaScript"],
+ "Architecture":["MVVM","VIPER","MVVM-C","MVC","MVP","Clean Architecture","Atomic Design"],
+ "Concurrency":["async/await","Actors","@MainActor","DispatchQueue","OperationQueue"],
+ "Testing":["XCTest","Quick/Nimble","TDD","80–95% coverage"],
+ "CI/CD & Tools":["GitHub Actions","Bitrise","SwiftLint","SonarQube","Xcode 26","SPM","CocoaPods"],
+ "SDKs & APIs":["Amazon Chime SDK","Datadog RUM","Firebase","AWS S3","Amazon Bedrock"],
+ "AI Tooling":["Claude Code","GitHub Copilot","Cursor","Prompt engineering"],
+ "Platforms":["iOS","tvOS (Apple TV)","macOS"],
+ "Data & Project Tools":["Core Data","SQLite","UserDefaults","MySQL","Jira","Rally","Agile/Scrum"]
+};
+$("skillGrid").innerHTML=Object.keys(skills).map(function(k){return '<div class="card"><h3>'+k.replace("&","&amp;")+'</h3><ul>'+skills[k].map(function(s){return '<li>'+s+'</li>'}).join("")+'</ul></div>'}).join("");
+
+var jobs=[
+ {t:"Senior Software Engineer, iOS/tvOS",c:"Tringapps Research Labs Pvt. Ltd.",d:"Oct 2025 – Apr 2026",p:[
+  "Built tvOS streaming apps for <b>NBCUniversal brands (CNBC, MSNBC, TODAY)</b> with SwiftUI, MVVM, and Apollo GraphQL.",
+  "Integrated <b>Amazon Bedrock</b> into the StoreKit 2 receipt-validation pipeline, with response parsing, caching, and fallback handling.",
+  "Set up <b>CI/CD from scratch</b> with GitHub Actions and Bitrise, and enforced SwiftLint quality gates.",
+  "Engineered tvOS 18/26 focus management with D-pad, @FocusState, prefersDefaultFocus, and focusSection.",
+  "Integrated <b>Datadog RUM</b> for network monitoring, error tracking, and custom analytics dashboards.",
+  "Led the <b>KatonMeet redesign</b> (3 to 4 tab bar with FAB) following Atomic Design principles.",
+  "Wrote unit tests with Quick/Nimble and XCTest to reach <b>80–95% coverage</b>; fixed race conditions with Thread Sanitizer."]},
+ {t:"Associate, iOS Developer",c:"Cognizant Technology Solutions India Pvt. Ltd.",d:"Sep 2021 – Sep 2025",p:[
+  "Developed and maintained enterprise iOS apps for <b>Macy’s, Bloomingdale’s, Pearson+, Truist, and Revel</b> using UIKit, VIPER, MVVM, and MVP.",
+  "Delivered Storyboard and programmatic UI with Auto Layout; added Core Data and SQLite persistence.",
+  "Kept unit test coverage <b>above 80%</b>; used Firebase, FullStory, and ServiceNow for production monitoring.",
+  "Created Jira tickets, reviewed code, analysed client requirements, and joined sprint planning."]},
+ {t:"Software Engineer, iOS",c:"Novac Technology Solutions Pvt. Ltd.",d:"Jun 2021 – Aug 2021",p:[
+  "Built the <b>Shri Loads</b> app from scratch with REST API integration, push notifications, and App Store publishing."]},
+ {t:"iOS Developer",c:"Pyramidion Solutions",d:"Jul 2020 – Jun 2021",p:[
+  "Delivered <b>9+ iOS apps</b> (Sura, Zig Taxi, ZigJek, Eatoo, Go-Deliver, Socio Feed, and more) using MVVM/MVC, RxSwift, AWS S3, and Firebase.",
+  "Handled the full SDLC: UI design, REST API integration, unit testing, bug fixing, and App Store publishing."]},
+ {t:"Earlier roles",c:"Technical Support, Web Development, and Content Writing",d:"Sep 2016 – Nov 2018",p:[
+  "<b>Technical Support Engineer</b>, Promon Software Solutions (2017–2018): ICINGA monitoring and SQL reporting.",
+  "<b>Junior Web Developer</b>, Urbansoft Technologies (2017): HTML, CSS, Bootstrap, and WordPress.",
+  "<b>Content Writer</b>, Letz Connect Technologies (2016–2017)."]}
+];
+$("jobs").innerHTML=jobs.map(function(j){return '<article class="job"><div class="meta"><span>'+j.d+'</span></div><h3>'+j.t+'</h3><div class="co">'+j.c+'</div><ul class="pts">'+j.p.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul></article>'}).join("");
+
+var projects=[
+ {n:"CNBC / MSNOW tvOS",i:"CN",s:"NBCUniversal · tvOS streaming",b:"Featured",t:["Swift","SwiftUI","MVVM","Clean Architecture","Amazon Bedrock","Apollo GraphQL","StoreKit 2","Datadog RUM","GitHub Actions","Bitrise","Quick/Nimble"],p:[
+  "Team of 5 iOS/tvOS engineers, Oct 2025 – Apr 2026.",
+  "Built <b>Amazon Bedrock LLM integration</b> for StoreKit 2 receipt validation.",
+  "Implemented tvOS 18/26 focus management with @FocusState and D-pad handling.",
+  "Added Datadog error tracking (MVPD, TempPass, VL Auth) and Apollo GraphQL caching.",
+  "Set up CI/CD from scratch and reached <b>80–95% unit test coverage</b>."]},
+ {n:"KatonMeet",i:"KM",s:"Video conferencing · iOS",b:"",t:["Swift","UIKit","SwiftUI","MVVM","Amazon Chime SDK","Atomic Design","Storyboard/XIB"],p:[
+  "Team of 4 iOS engineers, Oct 2025 – Apr 2026.",
+  "Redesigned the tab bar from 3 to 4 tabs with a floating action button.",
+  "Built Change Password and Create New Password screens with particle effects.",
+  "Added file-type-specific chat icons and fixed participant search and filter.",
+  "Improved memory management with [weak self] and refactored delegate patterns."]},
+ {n:"Pearson+",i:"P+",s:"EdTech · Pearson Education",b:"",t:["Swift","UIKit","VIPER","MVVM","Core Data","SQLite","REST APIs","XCTest","Firebase","FullStory"],p:[
+  "Team of 8 iOS engineers, Sep 2021 – Sep 2025.",
+  "Built eTextbook reader screens plus study prep and exam features.",
+  "Added offline content with Core Data and production monitoring dashboards.",
+  "Kept unit test coverage above 80% and handled production support."]},
+ {n:"Macy’s &amp; Bloomingdale’s",i:"M",s:"Retail commerce · iOS",b:"",t:["Swift","UIKit","VIPER","MVP","Core Data","SQLite","REST APIs","Firebase","FullStory","ServiceNow"],p:[
+  "Team of 10+ iOS engineers, Sep 2021 – Sep 2025.",
+  "Built product listing and detail screens plus cart and checkout flows.",
+  "Triaged production errors with Firebase and FullStory and created Jira tickets.",
+  "Maintained 80%+ unit test coverage and reviewed code."]},
+ {n:"Truist Mobile",i:"T",s:"Fintech · Banking app · iOS",b:"",a:"https://apps.apple.com/in/app/truist-mobile/id1555389200",t:["Swift","UIKit","VIPER","MVVM","MVP","Auto Layout","Core Data","SQLite","XCTest","Firebase","FullStory","ServiceNow"],p:[
+  "Sep 2021 – Sep 2025, as part of my work at Cognizant.",
+  "Developed and maintained an enterprise fintech iOS app using UIKit, VIPER, MVVM, and MVP.",
+  "Delivered Storyboard and programmatic UI screens with Auto Layout and local persistence with Core Data and SQLite.",
+  "Kept unit test coverage above 80% and supported production with Firebase, FullStory, and ServiceNow."]}
+];
+$("projList").innerHTML=projects.map(function(p){return '<article class="proj"><header><div class="ico" aria-hidden="true">'+p.i+'</div><div><h3>'+p.n+'</h3><div class="sub">'+p.s+'</div></div>'+(p.b?'<span class="badge">'+p.b+'</span>':'')+'</header><ul class="tags">'+p.t.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><ul class="pts">'+p.p.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul></article>'}).join("");
+
+projects.forEach(function(p,i){if(p.a){var a=document.createElement("a");a.className="btn";a.href=p.a;a.target="_blank";a.rel="noopener noreferrer";a.style.marginTop="14px";a.textContent="View on the App Store: "+p.n.replace("&amp;","&");document.querySelectorAll(".proj")[i].appendChild(a)}});
+
+function toast(m){var t=$("toast");t.textContent=m;t.className="on";setTimeout(function(){t.className=""},1800)}
+$("copy").addEventListener("click",function(){
+ try{navigator.clipboard.writeText("sivar468@gmail.com").then(function(){toast("Email copied")},function(){toast("Copy failed. Email: sivar468@gmail.com")})}
+ catch(e){toast("Copy failed. Email: sivar468@gmail.com")}
+});
+</script>
+</body>
+</html>
